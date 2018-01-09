@@ -199,20 +199,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .btn-get-started:hover {
   background: #2dc997;
-  border: 2px solid #2dc997;
+border: 2px solid #2dc997;
 }
 
-.download_but {
-    background-color: transparent; 
-    color: black !important; 
-    border: 2px solid black;
-    border-radius: 50px;
-}
-
-.download_but:hover {
-    background-color: #00ff00;
-    color: white;
-}
 
 
 /*--------------------------------------------------------------
@@ -560,6 +549,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
+#about .download_but {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #2dc997;
+  color: #fff;
+}
+
+#about .download_but:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #2dc997;
+  color: black !important;
+}
 
 /* Services Section
 --------------------------------*/
