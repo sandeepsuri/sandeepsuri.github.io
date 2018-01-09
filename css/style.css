@@ -202,6 +202,19 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #2dc997;
 }
 
+.download_but {
+    background-color: transparent; 
+    color: black !important; 
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.download_but:hover {
+    background-color: #00ff00;
+    color: white;
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -482,7 +495,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  background: url(../img/sit_down.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
