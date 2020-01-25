@@ -1,0 +1,22 @@
+{
+    "title": "Sandeep Suri",
+    "social": {
+        "linkedin": {
+            "visible": true,
+            "icon": "linkedin",
+            "url": "https://www.linkedin.com/in/sandeep-suri-0257a6143/"
+        },
+
+        "insta": {
+            "visible": true,
+            "icon": "instagram",
+            "url": "https://www.instagram.com/sunnysuri28/"
+        },
+
+        "github": {
+            "visible": true,
+            "icon": "git",
+            "url": "https://github.com/sandeepsuri"
+        }
+    }
+}
