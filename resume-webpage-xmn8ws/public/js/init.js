@@ -535,10 +535,11 @@ function arlo_tm_animate_text(){
 	
 	"use strict";
 	
+	var data = window.__PRELOADED__;
 	var animateSpan			= jQuery('.arlo_tm_animation_text_word');
 	
 		animateSpan.typed({
-			strings: ["Web Developer", "Basketball Enthusiast", "Food Lover"],
+			strings: data.page.profile.positions.split(", "),
 			loop: true,
 			startDelay: 1e3,
 			backDelay: 2e3

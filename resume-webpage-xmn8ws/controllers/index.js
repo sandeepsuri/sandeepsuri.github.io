@@ -3,6 +3,7 @@ const SchoolController = require('./SchoolController')
 const PostController = require('./PostController')
 const ProjectController = require('./ProjectController')
 const ReferenceController = require('./ReferenceController')
+const SubscriberController = require('./SubscriberController')
 
 module.exports = {
 
@@ -10,6 +11,7 @@ module.exports = {
 	school: SchoolController,
 	post: PostController,
 	reference: ReferenceController,
-	project: ProjectController
+	project: ProjectController,
+	subscriber: SubscriberController
 
 }

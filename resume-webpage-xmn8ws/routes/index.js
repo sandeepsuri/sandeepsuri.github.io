@@ -1,4 +1,3 @@
-// Full Documentation - https://docs.turbo360.co
 const turbo = require('turbo360')({site_id: process.env.TURBO_APP_ID})
 const vertex = require('vertex360')({site_id: process.env.TURBO_APP_ID})
 const controllers = require('../controllers')
@@ -10,8 +9,44 @@ const router = vertex.router()
  * folder to populate template data.
  */
 router.get('/', (req, res) => {
-	const data = req.context // {cdn:<STRING>, global:<OBJECT>}
-	res.render('home', data) // render home.mustache	
+    const data = req.context // {cdn:<STRING>, global:<OBJECT>}  
+	
+	turbo.pageConfig('home', process.env.TURBO_APP_ID, process.env.TURBO_ENV)
+	.then(homeConfig => {
+		// For my skills
+		const skillsStr = homeConfig.skillSection.skills
+		const skillsArr = skillsStr.split(',')
+		homeConfig.skillSection['skills'] = skillsArr.map(skill => {
+			//html5: 90%
+			const skillPart = skill.split(':')
+			if (skillPart.length > 1) {
+				const skillObj = {}
+				skillObj['name'] = skillPart[0]
+				skillObj['exp'] = skillPart[1]
+				skillObj['percent'] = skillPart[2]
+
+				return skillObj
+			}
+		})
+
+		data['page'] = homeConfig
+		return turbo.currentApp(process.env.TURBO_ENV)
+	})
+	.then(site => {
+		data['site'] = site
+		data['global'] = site.globalConfig
+		data['preloaded'] = JSON.stringify({
+			page: data.page,
+			global: data.global
+		}); 
+		res.render('home', data) // render home.mustache  
+	})
+	.catch(err => {
+		res.json({
+			confirmation: 'fail',
+			message: err.message
+		})
+	})
 })
 
 /* *
@@ -19,8 +54,7 @@ router.get('/', (req, res) => {
  * on the 'req.params.page' parameter passed in the url
  */
 router.get('/:page', (req, res) => {
-	const data = req.context
-	res.render(req.params.page, data)
+    res.render(req.params.page, data)
 })
 
 /* *
@@ -29,12 +63,13 @@ router.get('/:page', (req, res) => {
  */
 const APIRouter = vertex.APIRouter
 const api = new APIRouter({
-	site_id: process.env.TURBO_APP_ID,
-	api_key: process.env.TURBO_API_KEY,
-	env: process.env.TURBO_ENV
+    site_id: process.env.TURBO_APP_ID,
+    api_key: process.env.TURBO_API_KEY,
+    env: process.env.TURBO_ENV
 })
 
 module.exports = {
     api: api.router(controllers),
     page: router
 }
+

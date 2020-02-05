@@ -31,13 +31,13 @@
                             <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
                             <div class="empty_notice"><span>Please Fill Required Fields</span></div>
                             <div class="wrap">
-                                <input id="name" type="text" placeholder="Your Name">
+                                <input id="contact-name" type="text" placeholder="Your Name">
                             </div>
                             <div class="wrap">
-                                <input id="email" type="text" placeholder="Your Email">
+                                <input id="contact-email" type="text" placeholder="Your Email">
                             </div>
                             <div class="wrap">
-                                <textarea id="message" placeholder="Your Message"></textarea>
+                                <textarea id="contact-message" placeholder="Your Message"></textarea>
                             </div>
                             <div class="arlo_tm_button">
                                 <a id="send_message" href="#"><span>Send Message</span></a>
@@ -56,4 +56,29 @@
     </div>
 </div>
 </div>
+<script>
+    $('#send_message').click(function(event) {
+        if (event) {
+            event.preventDefault()
+        }
+        var visitor = {
+            name: $('#contact-name').val(),
+            email: $('#contact-email').val(),
+            msg: $('#contact-message').val()
+        }
+        
+
+        $.ajax({
+            url: '/api/subscriber',
+            type: 'POST',
+            data: visitor,
+            success: function(response){
+                console.log("Contact form submitted: " + JSON.stringify(visitor))
+            },
+            error: function(response){
+                console.err("Error in sending form") 
+            },
+        })
+    })
+</script>
 <!-- /CONTACT & FOOTER -->

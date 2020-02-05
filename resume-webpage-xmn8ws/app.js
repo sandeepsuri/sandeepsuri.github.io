@@ -20,9 +20,11 @@ app.use(vertex.setContext(process.env))
 
 // import route files
 const sample = require('./routes/index') // sample routes for pages and REST API
-
+const vertexRouters = require('./routes/vertex')
 // set routes
 app.use('/', sample.page)
-app.use('/api', sample.api)
+// app.use('/api', sample.api)
+app.use('/api', vertexRouters.api)
+app.use('/blocks', vertexRouters.blocks)
 
 module.exports = app

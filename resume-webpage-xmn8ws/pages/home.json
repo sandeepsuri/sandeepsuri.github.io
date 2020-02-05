@@ -2,6 +2,19 @@
     "profile": {
         "firstName": "Sandeep",
         "lastName": "Suri",
-        "profile-img": "https://lh3.googleusercontent.com/2XKENhW6nEDPFFfxadjxN4Jpj58xy6whNm45V_XWB8aMNhx8HJfn1p3cmgUBNExWC4taQlerwfTko4ki5m1JqNDo"
+        "profile-img": "https://lh3.googleusercontent.com/2XKENhW6nEDPFFfxadjxN4Jpj58xy6whNm45V_XWB8aMNhx8HJfn1p3cmgUBNExWC4taQlerwfTko4ki5m1JqNDo",
+        "positions": "Software Developer, Part-time foodie, Basketball Enthusiast" 
+    },
+    "aboutMe": {
+    	"bio": "Hello and welcome to my site! I'm a new graduate from Ryerson University for Computer Engineering and I have a passion for web developement! Right now I'm looking for any opportunity in the software developement field to apply my critical thinking skills to. In the mean time I decided to make this quick little site using Node and Express JS. Along with my experience and resume, I'll be adding some posts about myself, my likes, my hobbies, any current project I might be working on, and maybe try adding some fun games to play as well! Feel free to connect with me on LinkedIn, or even email me!",
+    	"resume": "https://storage.turbo360.co/resume-webpage-xmn8ws/Sandeep_Suri_2019_Res.pdf",
+    	"about_pic": ""
+    },
+    "skillSection": {
+        "header": "A little about my experience",
+        "description": "Even though I'm a new graduate, I make sure I still practice my development skills. From my GitHub, I have created schedulers utilizing angular + ionic, and with Laravel also.",
+        "skills": "HTML5:2 years of experience:90,Javascript:2 years of experience:90,CSS:2 years of experience:90,PHP:1 Year of experience:80"
     }
 }
+
+
