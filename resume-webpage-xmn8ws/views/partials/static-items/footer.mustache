@@ -41,6 +41,10 @@
                             </div>
                             <div class="arlo_tm_button">
                                 <a id="send_message" href="#"><span>Send Message</span></a>
+                                <div class="alert alert-success alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    Success! message sent successfully.
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -56,29 +60,5 @@
     </div>
 </div>
 </div>
-<script>
-    $('#send_message').click(function(event) {
-        if (event) {
-            event.preventDefault()
-        }
-        var visitor = {
-            name: $('#contact-name').val(),
-            email: $('#contact-email').val(),
-            msg: $('#contact-message').val()
-        }
-        
-
-        $.ajax({
-            url: '/api/subscriber',
-            type: 'POST',
-            data: visitor,
-            success: function(response){
-                console.log("Contact form submitted: " + JSON.stringify(visitor))
-            },
-            error: function(response){
-                console.err("Error in sending form") 
-            },
-        })
-    })
-</script>
+<script src="/js/contact-form/contact.js"></script>
 <!-- /CONTACT & FOOTER -->

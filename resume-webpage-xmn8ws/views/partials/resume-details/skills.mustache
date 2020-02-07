@@ -1,0 +1,29 @@
+<div class="arlo_tm_section">
+    <div class="arlo_tm_skills_wrap">
+        <div class="container">
+            <div class="inner_wrap">
+                <div class="leftbox">
+                    <div class="arlo_tm_mini_title_holder">
+                        <h4>{{page.skillSection.header}}</h4>
+                    </div>
+                    <p>{{page.skillSection.description}}</p>
+                </div>
+                <div class="rightbox">
+                    <div class="progress_bar_wrap_total">
+                        <div class="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
+                            <!-- Loop through skills with foreach -->
+                            {{#page.skillSection.skills}}
+                                <div class="arlo_tm_progress" data-value="{{percent}}" data-color="#000">
+                                    <span><span class="label">{{name}} - <span class="experience">{{exp}}</span></span><span class="number">{{percent}}%</span></span>
+                                    <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+                                </div>
+                            {{/page.skillSection.skills}}
+                
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

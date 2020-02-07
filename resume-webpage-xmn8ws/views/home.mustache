@@ -66,274 +66,31 @@
 				</div>
 				
 				<!-- ABOUT -->
-				<div class="arlo_tm_section relative" id="about">
-					<div class="arlo_tm_about_wrapper_all">
-						<div class="container">
-							<div class="arlo_tm_title_holder">
-								<h3>About Me</h3>
-								<span>Main informations about me</span>
-							</div>
-							<div class="arlo_tm_about_wrap">
-								<div class="author_wrap">
-									<div class="leftbox">
-										<div class="about_image_wrap parallax" data-relative-input="true">
-											<div class="image layer" data-depth="0.1">
-												<img src="img/about/550x640.jpg" alt="" />
-												<div class="inner" data-img-url="img/about/1.jpg"></div>
-											</div>
-											<div class="border layer" data-depth="0.2">
-												<img src="img/about/550x640.jpg" alt="" />
-												<div class="inner"></div>
-											</div>
-										</div>
 
-									</div>
-									<div class="rightbox">
-										<div class="arlo_tm_mini_title_holder">
-											<h4>I'm {{page.profile.firstName}} {{page.profile.lastName}} and I'm a <span class="arlo_tm_animation_text_word"></span></h4>
-										</div>
-										<div class="definition">
-											<p>Hi! My name is <strong>{{page.profile.firstName}} {{page.profile.lastName}}</strong>. {{page.aboutMe.bio}}</p>
-										</div>
-										<div class="about_short_contact_wrap">
-											<ul>
-												<li>
-													<span><label>Age:</label> 23</span>
-												</li>
-												<li>
-													<span><label>City:</label> Toronto, ON</span>
-												</li>
-												<li>
-													<span><label>Interests:</label>Basketball, Raptors, Cooking</span>
-												</li>
-												<li>
-													<span><label>Study:</label> Ryerson University</span>
-												</li>
-												<li>
-													<span><label>Degree:</label> Bachelor's of Engineering</span>
-												</li>	
-												<li>
-													<span><label>Mail:</label> <a href="mailto:example@gmail.com">mymail&#64;gmail.com</a></span>
-												</li>
-											</ul>
-										</div>
-										<div class="buttons_wrap">
-											<ul>
-												<li>
-													<a href="{{page.aboutMe.resume}}"><span>Download CV</span></a>
-												</li>
-												<li class="anchor">
-													<a href="mailto:example@gmail.com"><span>Send Message</span></a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{{>aboutMe}}
+
 				<!-- /ABOUT -->
 				
 				<!-- SKILLS -->
-				<div class="arlo_tm_section">
-					<div class="arlo_tm_skills_wrap">
-						<div class="container">
-							<div class="inner_wrap">
-								<div class="leftbox">
-									<div class="arlo_tm_mini_title_holder">
-										<h4>{{page.skillSection.header}}</h4>
-									</div>
-									<p>{{page.skillSection.description}}</p>
-								</div>
-								<div class="rightbox">
-									<div class="progress_bar_wrap_total">
-										<div class="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
-											<!-- Loop through skills with foreach -->
-											{{#page.skillSection.skills}}
-												<div class="arlo_tm_progress" data-value="{{percent}}" data-color="#000">
-													<span><span class="label">{{name}} - <span class="experience">{{exp}}</span></span><span class="number">{{percent}}%</span></span>
-													<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
-												</div>
-											{{/page.skillSection.skills}}
-								
 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{{>skills}}
+
 				<!-- /SKILLS -->
 				
 				<!-- SERVICES -->
-				<div class="arlo_tm_section" id="services">
-					<div class="arlo_tm_services_wrap">
-						<div class="container">
-							<div class="arlo_tm_title_holder">
-								<h3>Amazing Services</h3>
-								<span>Meet our amazing services</span>
-							</div>
-							<div class="list_wrap">
-								<ul>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/camera-diaphragm.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Photography</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/new-tab.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Web Design</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/layers.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Branding</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/share.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Social Media</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/adobe-illustrator.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Illustrator</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="inner">
-											<div class="icon">
-												<img class="svg" src="img/svg/seo-performance-marketing-graphic.svg" alt="" />
-											</div>
-											<div class="title_service">
-												<h3>Marketing</h3>
-											</div>
-											<div class="text">
-												<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<!-- Not added yet. Will had when I start to provide services in the future! -->
+
 				<!-- /SERVICES -->
 				
 				<!-- PORTFOLIO -->
 				<div class="arlo_tm_section relative" id="portfolio">
 					<div class="arlo_tm_portfolio_wrapper_all">
 
-						<!-- PORTFOLIO FILTER -->
-						<div class="arlo_tm_second_portfolio">
-						<div class="container">
-							<div class="arlo_tm_portfolio_wrap">
-								<div class="arlo_tm_title_holder portfolio">
-									<h3>Creative Works</h3>
-									<span>Check out our latest creative works</span>
-								</div>
-								<div class="arlo_tm_portfolio_titles"></div>
-								<ul class="arlo_tm_portfolio_filter">
-									<li><a href="#" class="current" data-filter="*">All</a></li>
-									<li><a href="#" data-filter=".design">Design</a></li>
-									<li><a href="#" data-filter=".photography">Photography</a></li>
-									<li><a href="#" data-filter=".development">Development</a></li>
-								</ul>
-								<ul class="arlo_tm_portfolio_list gallery_zoom">
-									<li class="design">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="Aoc Productions" data-category="Design">
-											<a href="portfolio-single.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/1.jpg"></div>
-											</a>
-										</div>
-									</li>
-									<li class="photography">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="Ind Hed" data-category="Photography">
-											<a href="portfolio-single-2.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/2.jpg"></div>
-											</a>
-										</div>
-									</li>
-									<li class="development">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="Paper Mockup" data-category="Development">
-											<a href="portfolio-single-3.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/3.jpg"></div>
-											</a>
-										</div>
-									</li>
-									<li class="photography">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="The Nordic" data-category="Photography">
-											<a href="portfolio-single-4.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/4.jpg"></div>
-											</a>
-										</div>
-									</li>
-									<li class="design">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="Creatives Castle" data-category="Design">
-											<a href="portfolio-single-5.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/5.jpg"></div>
-											</a>
-										</div>
-									</li>
-									<li class="photography">
-										<div class="entry arlo_tm_portfolio_animation_wrap" data-title="White Bag" data-category="Photography">
-											<a href="portfolio-single-6.html">
-												<img src="img/portfolio/600x600.jpg" alt="" />
-												<div class="arlo_tm_portfolio_image_main" data-img-url="img/portfolio/6.jpg"></div>
-											</a>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					<!-- PORTFOLIO FILTER -->
+
+					{{>portfolio}}
+
 					<!-- /PORTFOLIO FILTER -->
 
 					</div>

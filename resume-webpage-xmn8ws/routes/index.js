@@ -13,6 +13,20 @@ router.get('/', (req, res) => {
 	
 	turbo.pageConfig('home', process.env.TURBO_APP_ID, process.env.TURBO_ENV)
 	.then(homeConfig => {
+		// For About Me Contacts
+		const aboutStr = homeConfig.aboutMe.about_short
+		const aboutArr = aboutStr.split(',')
+		homeConfig.aboutMe['about_short'] = aboutArr.map(about_me => {
+			const aboutPart = about_me.split(':')
+			if(aboutPart.length > 1) {
+				const aboutObj = {}
+				aboutObj['name'] = aboutPart[0]
+				aboutObj['ans'] = aboutPart[1]
+
+				return aboutObj
+			}
+		})
+
 		// For my skills
 		const skillsStr = homeConfig.skillSection.skills
 		const skillsArr = skillsStr.split(',')
@@ -44,7 +58,7 @@ router.get('/', (req, res) => {
 	.catch(err => {
 		res.json({
 			confirmation: 'fail',
-			message: err.message
+			message: 'Something went wrong with the route'
 		})
 	})
 })
